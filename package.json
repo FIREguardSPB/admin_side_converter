@@ -1,0 +1,67 @@
+{
+  "name": "converterdbui",
+  "homepage": ".",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "concurrently": "^6.4.0",
+    "cra-template": "1.1.2",
+    "fs-extra": "^10.0.0",
+    "lodash": "^4.17.21",
+    "mongodb": "^4.2.1",
+    "mongoose": "^4.6.1",
+    "path": "^0.12.7",
+    "pkg": "^5.5.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-loader-spinner": "^4.0.0",
+    "react-scripts": "4.0.3",
+    "react-select": "^5.2.1",
+    "styled-components": "^5.3.3",
+    "tree-kill": "^1.2.2"
+  },
+  "scripts": {
+    "start-client": "react-scripts start",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "build": "react-scripts build",
+    "start": "concurrently  \"cd backend && npm start\" \"react-scripts start\"",
+    "server": "nodemon index.js",
+    "client": "react-scripts start",
+    "dist": "build --tasks build/static/js/runtime-main.ea7a8419.js",
+    "package": "pkg package.json -t node14-win-x64 --out-path dist"
+  },
+  "proxy": "http://localhost:5000/",
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "pkg": {
+    "outputPath": "dist",
+    "assets": [
+      "./build/static/index.html"
+    ],
+    "options": [
+      "experimental-modules"
+    ]
+  },
+  "bin": "./backend/src/index.js",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@babel/preset-react": "^7.16.5"
+  }
+}

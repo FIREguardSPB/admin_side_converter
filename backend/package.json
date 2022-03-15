@@ -1,0 +1,47 @@
+{
+  "name": "converter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "build": "pkg . --targets node14 --out-path pkg"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "current-processes": "^0.2.1",
+    "dotenv": "^8.2.0",
+    "easy-zip2": "^3.1.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.10.0",
+    "fs-extra": "^10.0.0",
+    "mongodb": "^4.2.1",
+    "mongoose": "^5.12.0",
+    "pidusage": "^3.0.0",
+    "ps-node": "^0.1.6",
+    "taskkill": "^3.0.0",
+    "terminate": "^2.2.2",
+    "tree-kill": "^1.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "pkg": {
+    "outputPath": "dist",
+    "assets": [
+      "./build/",
+      "./build/static/",
+      "./build/index.html"
+    ],
+    "options": [
+      "experimental-modules"
+    ]
+  }
+}
